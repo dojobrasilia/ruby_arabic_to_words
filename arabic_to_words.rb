@@ -1,9 +1,17 @@
 class ArabicToWords
 
 	def toWords number
+	
 		array_first =  ['zero', 'one', 'two','three','four','five','six', 'seven', 'eight','nine',
 		'ten', 'eleven', 'twelve','thirteen','fourteen','fifteen','sixteen', 'seventeen', 'eighteen','nineteen']
 		array_tens = ['twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
+		
+		array = [];
+		array << array_first
+		array << array_tens
+		
+		
+		
 		if(number >=0 && number<=19)
 			return array_first [number]
 		elsif (number % 10 == 0 && number < 100)
