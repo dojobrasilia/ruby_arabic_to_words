@@ -14,6 +14,16 @@ describe "ArabicToWords" do
 		converter.toWords(7).should == 'seven'
 		converter.toWords(8).should == 'eight'
 		converter.toWords(9).should == 'nine'
+		converter.toWords(10).should == 'ten'
+		converter.toWords(11).should == 'eleven'
+		converter.toWords(12).should == 'twelve'
+		converter.toWords(13).should == 'thirteen'
+		converter.toWords(14).should == 'fourteen'
+		converter.toWords(15).should == 'fithteen'
+		converter.toWords(16).should == 'sixteen'
+		converter.toWords(17).should == 'seventeen'
+		converter.toWords(18).should == 'eighteen'
+		converter.toWords(19).should == 'nineteen'		
 	end
 
 end
