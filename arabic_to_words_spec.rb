@@ -2,7 +2,7 @@ require 'arabic_to_words'
 
 describe "ArabicToWords" do
 
-	it 'should be right for the first digits' do
+	it 'should be right from zero until nineteen' do
 		converter = ArabicToWords.new
 		converter.toWords(0).should == 'zero'
 		converter.toWords(1).should == 'one'
@@ -19,11 +19,25 @@ describe "ArabicToWords" do
 		converter.toWords(12).should == 'twelve'
 		converter.toWords(13).should == 'thirteen'
 		converter.toWords(14).should == 'fourteen'
-		converter.toWords(15).should == 'fithteen'
+		converter.toWords(15).should == 'fifteen'
 		converter.toWords(16).should == 'sixteen'
 		converter.toWords(17).should == 'seventeen'
 		converter.toWords(18).should == 'eighteen'
 		converter.toWords(19).should == 'nineteen'		
+	end
+	
+	it 'should be right ten multiples' do
+		converter = ArabicToWords.new
+		converter.toWords(0).should == 'zero'
+		converter.toWords(10).should == 'ten'
+		converter.toWords(20).should == 'twenty'
+		converter.toWords(30).should == 'thirty'
+		converter.toWords(40).should == 'fourty'
+		converter.toWords(50).should == 'fifty'
+		converter.toWords(60).should == 'sixty'
+		converter.toWords(70).should == 'seventy'
+		converter.toWords(80).should == 'eighty'
+		converter.toWords(90).should == 'ninety'
 	end
 
 end
