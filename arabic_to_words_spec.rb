@@ -39,5 +39,17 @@ describe "ArabicToWords" do
 		converter.toWords(80).should == 'eighty'
 		converter.toWords(90).should == 'ninety'
 	end
+	
+	it 'should answer from twenty one to twenty nine' do
+		converter = ArabicToWords.new
+		converter.toWords(21).should == 'twenty one'
+		converter.toWords(32).should == 'thirty two'
+		converter.toWords(47).should == 'fourty seven'
+		converter.toWords(62).should == 'sixty two'
+		converter.toWords(83).should == 'eighty three'
+		converter.toWords(95).should == 'ninety five'
+	end
+	
+	
 
 end
