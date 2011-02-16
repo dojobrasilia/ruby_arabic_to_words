@@ -6,10 +6,16 @@ class ArabicToWords
 		array_tens = ['twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
 		if(number >=0 && number<=19)
 			return array_first [number]
-		elsif (number % 10 == 0)
+		elsif (number % 10 == 0 && number < 100)
 			return array_tens [number/10 -2]
-		else
+		elsif (number < 100)
 			return "#{array_tens[number/10 - 2]} #{array_first[number % 10]}"
+		else
+			if (number == 100) 
+				return "a hundred"
+			else
+				return "#{array_first[number/100]} hundreds"
+			end
 		end
 	end
 

@@ -40,7 +40,7 @@ describe "ArabicToWords" do
 		converter.toWords(90).should == 'ninety'
 	end
 	
-	it 'should answer from twenty one to twenty nine' do
+	it 'should answer from twenty one to ninety nine' do
 		converter = ArabicToWords.new
 		converter.toWords(21).should == 'twenty one'
 		converter.toWords(32).should == 'thirty two'
@@ -50,6 +50,17 @@ describe "ArabicToWords" do
 		converter.toWords(95).should == 'ninety five'
 	end
 	
-	
+	it 'should answer for hundreds' do
+		converter = ArabicToWords.new
+		converter.toWords(100).should == 'a hundred'
+		converter.toWords(200).should == 'two hundreds'
+		converter.toWords(300).should == 'three hundreds'
+		converter.toWords(400).should == 'four hundreds'
+		converter.toWords(500).should == 'five hundreds'
+		converter.toWords(600).should == 'six hundreds'
+		converter.toWords(700).should == 'seven hundreds'
+		converter.toWords(800).should == 'eight hundreds'
+		converter.toWords(900).should == 'nine hundreds'
+	end
 
 end
